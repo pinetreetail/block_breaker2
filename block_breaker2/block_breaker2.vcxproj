@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BlockPlayer.cpp" />
+    <ClCompile Include="Boll.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="SceneMain.cpp" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlockPlayer.h" />
+    <ClInclude Include="Boll.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneMain.h" />
