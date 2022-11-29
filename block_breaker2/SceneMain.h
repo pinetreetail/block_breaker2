@@ -3,6 +3,8 @@
 #include "DxLib.h"
 #include "game.h"
 
+#include "BlockPlayer.h"
+
 class SceneMain
 {
 public:
@@ -21,7 +23,7 @@ private:
 	int m_Stringcolor;
 	bool scenedraw;
 
-
+	BlockPlayer player;
 
 };
 

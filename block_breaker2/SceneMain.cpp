@@ -18,6 +18,8 @@ SceneMain::~SceneMain()
 
 void SceneMain::init()
 {
+	player.init();
+
 
 
 	{
@@ -27,7 +29,7 @@ void SceneMain::init()
 
 void SceneMain::update()
 {
-
+	player.update();
 
 
 
@@ -49,7 +51,7 @@ void SceneMain::update()
 
 void SceneMain::draw()
 {
-
+	player.draw();
 
 
 

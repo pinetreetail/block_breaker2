@@ -2,6 +2,7 @@
 
 #include "Vec2.h"
 #include "DxLib.h"
+#include "game.h"
 
 class BlockPlayer
 {
@@ -27,6 +28,7 @@ public:
 	
 private:
 	Vec2 m_pos;
+	Vec2 m_vec;
 	Vec2 m_size;
 
 

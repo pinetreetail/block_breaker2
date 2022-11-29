@@ -44,6 +44,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		case 0:
 			scene_start.update();
 			scene_start.draw();
+
 			if (CheckHitKey(KEY_INPUT_SPACE) == 0)
 			{
 				if (space > 0)
@@ -65,6 +66,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		case 1:
 			scene_main.update();
 			scene_main.draw();
+
 			if (CheckHitKey(KEY_INPUT_SPACE) == 0)
 			{
 				if (space > 0)
@@ -81,15 +83,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			{
 				space++;
 			}
+
 			break;
 		case 2:
 			scene_end.update();
 			scene_end.draw();
 			break;
 		}
-		
-
-
 		
 		// — ‰æ–Ê‚ð•\‰æ–Ê‚É“ü‚ê‘Ö‚¦‚é
 		ScreenFlip();
