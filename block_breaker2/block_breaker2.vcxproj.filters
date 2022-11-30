@@ -30,10 +30,10 @@
     <ClCompile Include="SceneEnd.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="BlockPlayer.cpp">
+    <ClCompile Include="BouncingBall.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Boll.cpp">
+    <ClCompile Include="PlayerBlock.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,10 +53,10 @@
     <ClInclude Include="SceneEnd.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="BlockPlayer.h">
+    <ClInclude Include="BouncingBall.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Boll.h">
+    <ClInclude Include="PlayerBlock.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

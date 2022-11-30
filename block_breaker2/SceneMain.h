@@ -3,7 +3,8 @@
 #include "DxLib.h"
 #include "game.h"
 
-#include "BlockPlayer.h"
+#include "PlayerBlock.h"
+#include "BouncingBall.h"
 
 class SceneMain
 {
@@ -23,7 +24,8 @@ private:
 	int m_Stringcolor;
 	bool scenedraw;
 
-	BlockPlayer player;
+	PlayerBlock player;
+	BouncingBall ball;
 
 };
 

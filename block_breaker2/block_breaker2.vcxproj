@@ -151,18 +151,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BlockPlayer.cpp" />
-    <ClCompile Include="Boll.cpp" />
+    <ClCompile Include="BouncingBall.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlayerBlock.cpp" />
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneStart.cpp" />
     <ClCompile Include="Vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BlockPlayer.h" />
-    <ClInclude Include="Boll.h" />
+    <ClInclude Include="BouncingBall.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="PlayerBlock.h" />
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneStart.h" />

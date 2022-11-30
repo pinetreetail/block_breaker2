@@ -19,7 +19,7 @@ SceneMain::~SceneMain()
 void SceneMain::init()
 {
 	player.init();
-
+	ball.init();
 
 
 	{
@@ -30,7 +30,7 @@ void SceneMain::init()
 void SceneMain::update()
 {
 	player.update();
-
+	ball.update();
 
 
 
@@ -52,7 +52,7 @@ void SceneMain::update()
 void SceneMain::draw()
 {
 	player.draw();
-
+	ball.draw();
 
 
 	{
