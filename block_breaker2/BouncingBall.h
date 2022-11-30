@@ -3,6 +3,8 @@
 #include "DxLib.h"
 #include "game.h"
 
+#include "PlayerBlock.h"
+
 class BouncingBall
 {
 public:
@@ -26,6 +28,8 @@ private:
 	int Color;
 
 	bool CurrDead;
+
+	PlayerBlock player;
 
 };
 

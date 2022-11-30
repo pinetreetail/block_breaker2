@@ -56,6 +56,14 @@ void BouncingBall::update()
 //		m_isDead = true;
 	}
 
+	if ((posY + width) < player.getTop() && (posX - width) > player.getLeft() && 
+		(posX + width) > player.getRight())
+	{
+		CurrSpeedY = -Speed;
+	}
+
+
+
 	posX += CurrSpeedX;
 	posY += CurrSpeedY;
 
