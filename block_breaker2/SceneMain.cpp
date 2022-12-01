@@ -20,7 +20,7 @@ void SceneMain::init()
 {
 	player.init();
 	ball.init();
-
+	block.init();
 
 	{
 		setStringColor(GetColor(255, 255, 255));
@@ -30,7 +30,10 @@ void SceneMain::init()
 void SceneMain::update()
 {
 	player.update();
-	ball.update();
+
+	ball.update(player, block);
+	
+	block.update();
 
 
 
@@ -53,7 +56,7 @@ void SceneMain::draw()
 {
 	player.draw();
 	ball.draw();
-
+	block.draw();
 
 	{
 		if (scenedraw)	return;

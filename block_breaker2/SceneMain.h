@@ -5,6 +5,7 @@
 
 #include "PlayerBlock.h"
 #include "BouncingBall.h"
+#include "TargetBlock.h"
 
 class SceneMain
 {
@@ -26,6 +27,6 @@ private:
 
 	PlayerBlock player;
 	BouncingBall ball;
-
+	TargetBlock block;
 };
 

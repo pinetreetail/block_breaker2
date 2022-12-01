@@ -157,6 +157,7 @@
     <ClCompile Include="SceneEnd.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneStart.cpp" />
+    <ClCompile Include="TargetBlock.cpp" />
     <ClCompile Include="Vec2.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +167,7 @@
     <ClInclude Include="SceneEnd.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneStart.h" />
+    <ClInclude Include="TargetBlock.h" />
     <ClInclude Include="Vec2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

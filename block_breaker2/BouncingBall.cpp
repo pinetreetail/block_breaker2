@@ -29,37 +29,64 @@ void BouncingBall::init()
 	Color = GetColor(0, 255, 0);
 }
 
-void BouncingBall::update()
+void BouncingBall::update(PlayerBlock& player, TargetBlock block)
 {
 	if (CurrDead)	return;
 
-	if ((posX - width) < 0)
 	{
-		posX = width;
-		CurrSpeedX = Speed;
+		if ((posX - width) < 0)
+		{
+			posX = width;
+			CurrSpeedX = Speed;
+		}
+		else if (posX > Game::kScreenWidth - width)
+		{
+			posX = Game::kScreenWidth - width;
+			CurrSpeedX = -Speed;
+		}
+		if ((posY - width) < 0)
+		{
+			posY = width;
+			CurrSpeedY = Speed;
+		}
+		else if (posY > Game::kScreenHeight - width)
+		{
+			CurrDead = true;
+		}
 	}
-	else if (posX > Game::kScreenWidth - width)
+
 	{
-		posX = Game::kScreenWidth - width;
-		CurrSpeedX = -Speed;
+		if ((posY + width) > player.getTop() && posY < player.getBottom() &&
+			posX > player.getLeft() && posX < player.getRight())
+		{
+			posY = (player.getTop() - width);
+			CurrSpeedY = -Speed;
+		}
 	}
-	if ((posY - width) < 0)
+	
+	if ((posY + width) > block.getTop() && posY < block.getBottom() &&
+		posX > block.getLeft() && posX < block.getRight())
 	{
-		posY = width;
+		posY = (block.getTop() - width);
+		CurrSpeedY = -Speed;
+	}
+	else if (posY < block.getTop() && (posY - width) > block.getBottom() &&
+		posX > block.getLeft() && posX < block.getRight())
+	{
+		posY = (block.getBottom() + width);
 		CurrSpeedY = Speed;
 	}
-	else if (posY > Game::kScreenHeight - width)
+	if (posY > block.getTop() && posY < block.getBottom() &&
+		(posX + width) < block.getLeft())
 	{
-		posY = Game::kScreenHeight - width;
-		CurrSpeedY = -Speed;
-
-//		m_isDead = true;
+		posX = (block.getLeft() - width);
+		CurrSpeedX = -Speed;
 	}
-
-	if ((posY + width) < player.getTop() && (posX - width) > player.getLeft() && 
-		(posX + width) > player.getRight())
+	else if (posY > block.getTop() && posY < block.getBottom() &&
+		(posX - width) < block.getRight())
 	{
-		CurrSpeedY = -Speed;
+		posX = (block.getRight() + width);
+		CurrSpeedX = Speed;
 	}
 
 

@@ -4,6 +4,7 @@
 #include "game.h"
 
 #include "PlayerBlock.h"
+#include "TargetBlock.h"
 
 class BouncingBall
 {
@@ -12,7 +13,7 @@ public:
 	virtual ~BouncingBall();
 
 	void init();
-	void update();
+	void update(PlayerBlock& player, TargetBlock block);
 	void draw();
 
 private:
@@ -28,8 +29,6 @@ private:
 	int Color;
 
 	bool CurrDead;
-
-	PlayerBlock player;
 
 };
 
