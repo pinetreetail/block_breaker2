@@ -6,7 +6,7 @@ TargetBlock::TargetBlock()	:
 	sizeX(0),
 	sizeY(0),
 	Color(0),
-	CurrDead(false)
+	CurrDead(true)
 {
 }
 
@@ -16,10 +16,12 @@ TargetBlock::~TargetBlock()
 
 void TargetBlock::init()
 {
-	posX = 140;
-	posY = 60;
-	sizeX = 150;
-	sizeY = 30;
+	posX = 0;	//140
+	posY = 0;	//60
+	sizeX = Game::kScreenWidth;
+	sizeY = 50; //30
+
+	CurrDead = false;
 
 	Color = GetColor(0, 255, 255);
 }

@@ -88,6 +88,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		case 2:
 			scene_end.update();
 			scene_end.draw();
+
 			break;
 		}
 		

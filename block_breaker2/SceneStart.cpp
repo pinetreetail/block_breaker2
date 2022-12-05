@@ -38,6 +38,6 @@ void SceneStart::update()
 void SceneStart::draw()
 {
 	if (scenedraw)	return;
-	DrawString(Game::kScreenWidth / 2, Game::kScreenHeight /2,
+	DrawString(250, Game::kScreenHeight /2,
 		"スペースキーを押したらゲームスタート", m_color);
 }

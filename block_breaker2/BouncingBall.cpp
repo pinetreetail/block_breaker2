@@ -8,7 +8,7 @@ BouncingBall::BouncingBall() :
 	Speed(0),
 	CurrSpeedX(0),
 	CurrSpeedY(0),
-	CurrDead(false)
+	CurrDead(true)
 {
 }
 
@@ -18,13 +18,15 @@ BouncingBall::~BouncingBall()
 
 void BouncingBall::init()
 {
-	posX = 100;
-	posY = 100;
+	posX = Game::kScreenWidth / 2; //300
+	posY = 550; //100
 	width = 25;
 
 	Speed = 8;
 	CurrSpeedX = Speed;
 	CurrSpeedY = Speed;
+
+	CurrDead = false;
 
 	Color = GetColor(0, 255, 0);
 }
@@ -64,32 +66,36 @@ void BouncingBall::update(PlayerBlock& player, TargetBlock block)
 		}
 	}
 	
-	if ((posY + width) > block.getTop() && posY < block.getBottom() &&
-		posX > block.getLeft() && posX < block.getRight())
 	{
-		posY = (block.getTop() - width);
-		CurrSpeedY = -Speed;
+		//　上
+		if ((posY + width) > block.getTop() && (posY + width) < block.getBottom() &&
+			posX > block.getLeft() && posX < block.getRight())
+		{
+			posY = (block.getTop() - width);
+			CurrSpeedY = -Speed;
+		}
+		//	下
+		if ((posY - width) > block.getTop() && (posY - width) < block.getBottom() &&
+			posX > block.getLeft() && posX < block.getRight())
+		{
+			posY = (block.getBottom() + width);
+			CurrSpeedY = Speed;
+		}
+		//　左
+		if (posY < block.getTop() && posY > block.getBottom() &&
+			(posX + width) > block.getLeft() && (posX + width) < block.getRight())
+		{
+			posX = (block.getLeft() - width);
+			CurrSpeedX = -Speed;
+		}
+		//　右
+		if (posY < block.getTop() && posY > block.getBottom() &&
+			(posX - width) > block.getLeft() && (posX - width) < block.getRight())
+		{
+			posX = (block.getRight() + width);
+			CurrSpeedX = Speed;
+		}
 	}
-	else if (posY < block.getTop() && (posY - width) > block.getBottom() &&
-		posX > block.getLeft() && posX < block.getRight())
-	{
-		posY = (block.getBottom() + width);
-		CurrSpeedY = Speed;
-	}
-	if (posY > block.getTop() && posY < block.getBottom() &&
-		(posX + width) < block.getLeft())
-	{
-		posX = (block.getLeft() - width);
-		CurrSpeedX = -Speed;
-	}
-	else if (posY > block.getTop() && posY < block.getBottom() &&
-		(posX - width) < block.getRight())
-	{
-		posX = (block.getRight() + width);
-		CurrSpeedX = Speed;
-	}
-
-
 
 	posX += CurrSpeedX;
 	posY += CurrSpeedY;

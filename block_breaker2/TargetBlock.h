@@ -17,6 +17,7 @@ public:
 	float getRight() const { return posX + sizeX; }
 	float getTop() const { return posY; }
 	float getBottom() const { return posY + sizeY; }
+
 private:
 
 	float posX;

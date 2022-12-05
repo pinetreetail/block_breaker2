@@ -18,8 +18,8 @@ PlayerBlock::~PlayerBlock()
 
 void PlayerBlock::init()
 {
-	posX = 565;
-	posY = 620;
+	posX = 325;
+	posY = 600;
 	sizeX = 150;
 	sizeY = 20;
 

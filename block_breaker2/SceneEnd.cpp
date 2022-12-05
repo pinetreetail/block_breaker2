@@ -38,6 +38,5 @@ void SceneEnd::update()
 void SceneEnd::draw()
 {
 	if (scenedraw)	return;
-	DrawString(Game::kScreenWidth / 2, Game::kScreenHeight / 2,
-		"ゲーム終わり", m_color);
+	DrawString(350, Game::kScreenHeight / 2, "ゲーム終わり", m_color);
 }
