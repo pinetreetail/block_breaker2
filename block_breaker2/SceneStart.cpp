@@ -40,4 +40,6 @@ void SceneStart::draw()
 	if (scenedraw)	return;
 	DrawString(250, Game::kScreenHeight /2,
 		"スペースキーを押したらゲームスタート", m_color);
+	DrawString(300, 300,
+		"ブロック崩し（未完成）", m_color);
 }
